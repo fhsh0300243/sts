@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import data.TableName;
 import lombok.Data;
 
 @Data
 @Entity
+@Table(name = TableName.USERS)
 public class UsersModel {
   
   @JsonProperty("usersId")
